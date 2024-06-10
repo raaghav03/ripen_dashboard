@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import { Logo, Home, Job, Referral, Setting, Mail } from "../assets/icons.tsx";
 
 const menuItems = [
-    { icon: <Home />, text: "Home" },
-    { icon: <Job />, text: "Job" },
-    { icon: <Referral />, text: "Referral" },
-    { icon: <Setting />, text: "Settings" },
+    { icon: <Home />, text: "Home", path: "/" },
+    { icon: <Job />, text: "Job", path: "/job" },
+    { icon: <Referral />, text: "Referral", path: "/referral" },
+    { icon: <Setting />, text: "Settings", path: "/settings" },
 ];
 
 const Sidebar = () => {
@@ -15,9 +16,13 @@ const Sidebar = () => {
                 <nav>
                     <div>
                         {menuItems.map((item, index) => (
-                            <div key={index} className="w-48 flex flex-row hover:duration-150 border-transparent border-[1px] focus:ring focus:ring-gray-400 hover:border-hover-gray-300 items-center rounded-lg hover:shadow-hover-inset hover:bg-white hover:text-black group gap-4 mb-2 text-itemGray px-3 py-2">
+                            <Link
+                                key={index}
+                                to={item.path}
+                                className="w-48 flex flex-row hover:duration-150 border-transparent border-[1px] focus:ring focus:ring-gray-400 hover:border-hover-gray-300 items-center rounded-lg hover:shadow-hover-inset hover:bg-white hover:text-black group gap-4 mb-2 text-itemGray px-3 py-2"
+                            >
                                 {item.icon} <div className="text-xl">{item.text}</div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </nav>
