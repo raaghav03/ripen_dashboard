@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@vercel/analytics": "^1.3.1",
+=======
+>>>>>>> 399399c (initial commit)
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

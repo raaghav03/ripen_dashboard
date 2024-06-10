@@ -2,6 +2,7 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+<<<<<<< HEAD
     extend: {
       colors: {
         sidebarBorder: "#EEEEF0",
@@ -16,6 +17,9 @@ export default {
         "hover-gray-300": "#ECECEC",
       },
     },
+=======
+    extend: { colors: { sidebar: "#EEEEF0" } },
+>>>>>>> 399399c (initial commit)
   },
   plugins: [],
 };
